@@ -22,19 +22,19 @@ Instructions on how to use them in your own application are linked below.</p>
 <tbody>
 <tr>
 <td>RemBG</td>
-<td>[<a href="https://pypi.org/project/rembg/">https://pypi.org/project/rembg/</a>][PlDb]</td>
+<td>[<a href="https://pypi.org/project/rembg/">https://pypi.org/project/rembg/</a>]</td>
 </tr>
 <tr>
 <td>Flask</td>
-<td>[<a href="https://pypi.org/project/Flask/">https://pypi.org/project/Flask/</a>][PlGh]</td>
+<td>[<a href="https://pypi.org/project/Flask/">https://pypi.org/project/Flask/</a>]</td>
 </tr>
 <tr>
 <td>Werkzeug</td>
-<td>[<a href="https://pypi.org/project/Werkzeug/">https://pypi.org/project/Werkzeug/</a>][PlGd]</td>
+<td>[<a href="https://pypi.org/project/Werkzeug/">https://pypi.org/project/Werkzeug/</a>]</td>
 </tr>
 <tr>
 <td>Requests</td>
-<td>[<a href="https://pypi.org/project/requests">https://pypi.org/project/requests</a>][PlOd]</td>
+<td>[<a href="https://pypi.org/project/requests">https://pypi.org/project/requests</a>]</td>
 </tr>
 </tbody>
 </table>
