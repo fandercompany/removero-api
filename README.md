@@ -60,38 +60,39 @@ with open(<span class="hljs-string">'anime.jpg'</span>, <span class="hljs-string
         <span class="hljs-built_in">print</span>(<span class="hljs-string">'Error occurred:'</span>, response.text)
 </code></pre>
 <h4 class="code-line" data-line-start=54 data-line-end=55 ><a id="JS_example_54"></a>JS example</h4>
-<pre><code class="has-line-data" data-line-start="57" data-line-end="94" class="language-sh">const fetch = require(<span class="hljs-string">'node-fetch'</span>);
-const fs = require(<span class="hljs-string">'fs'</span>);
+<pre><code class="has-line-data" data-line-start="57" data-line-end="94" class="language-sh">
+const fetch = require('node-fetch');
+const fs = require('fs');
 
-const url = <span class="hljs-string">'https://apiremovero.serveo.net/api/remove_background'</span>;
-const imageFilePath = <span class="hljs-string">'./anime.jpg'</span>;
+const url = 'https://apiremovero.serveo.net/api/remove_background';
+const imageFilePath = './anime.jpg';
 
-fs.readFile(imageFilePath, (err, imageBuffer) =&gt; {
-  <span class="hljs-keyword">if</span> (err) {
-    console.error(<span class="hljs-string">'Error reading image:'</span>, err);
-    <span class="hljs-built_in">return</span>;
+fs.readFile(imageFilePath, (err, imageBuffer) => {
+  if (err) {
+    console.error('Error reading image:', err);
+    return;
   }
 
   const formData = new FormData();
-  formData.append(<span class="hljs-string">'image'</span>, imageBuffer, { filename: <span class="hljs-string">'anime.jpg'</span> });
+  formData.append('image', imageBuffer, { filename: 'anime.jpg' });
 
   fetch(url, {
-    method: <span class="hljs-string">'POST'</span>,
+    method: 'POST',
     body: formData,
   })
-    .then((response) =&gt; {
-      <span class="hljs-keyword">if</span> (response.status === <span class="hljs-number">200</span>) {
-        <span class="hljs-built_in">return</span> response.json();
-      } <span class="hljs-keyword">else</span> {
-        throw new Error(`Request failed with status <span class="hljs-variable">${response.status}</span>`);
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else {
+        throw new Error(`Request failed with status ${response.status}`);
       }
     })
-    .then((result) =&gt; {
+    .then((result) => {
       const resultFilename = result.result;
-      console.log(`result filename: <span class="hljs-variable">${resultFilename}</span>`);
+      console.log(`result filename: ${resultFilename}`);
     })
-    .catch((error) =&gt; {
-      console.error(<span class="hljs-string">'An error occurred:'</span>, error);
+    .catch((error) => {
+      console.error('An error occurred:', error);
     });
 });
 
